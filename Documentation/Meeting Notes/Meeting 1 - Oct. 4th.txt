@@ -1,0 +1,27 @@
+Meeting Notes 10/4/2024
+-
+Capstone Project
+-
+Dave is our client. Interactive Voice Coach.
+-
+Machine Learning is being worked on by the linguistics department at UBC. Training Data is captured from patients in a clinical environment, dysarthric speech. As well as from a university in Illinois giving a larger amount of data.
+-
+Parkinsons, in our clients use case, is the main driving force behind dysarthric speech. 
+-
+Need a chatbot to capture more natural dysarthric speech. So the software will capture daily results from those with speech problems to see if there is an overall improvement. i.e. Not a repeat of the same word 10 times, and rather will capture real-time chats and provide immediate direct feedback. 
+-
+The end goal is that the client can offer a service that can correctly interpret how people with speech problems are speaking and provide a “translation” to more recognizable product. Sort of like an advanced version of Stephen Hawkings communication device but more natural sounding, and in real-time based off of what the patient is saying.
+-
+Current speech recognition is 75% in the proof of concept model and the hope is to increase to 90ish% in speech recognition.
+-
+Currently there is a focus group on how to deliver the results to patients in a way that is motivating rather than inhibiting their ambitions to continue speech therapy. This will help the client in getting an ethics certification in terms of handling the patient data.
+-
+Where we start:
+-
+Client doesn’t necessarily care about our tech stack. Wants us to use a modern and lightweight project infrastructure to manage our sprints. i.e quick changes to codebase and not archaic.
+-
+We need to set up more meetings with Dave to distill the capstone into discrete tasks and actionable steps.
+-
+Start with two/three(?) times a week meetings with Dave.
+-
+Maybe talk about a more structured way to accomplish our sprint tasks. i.e Specific dev times for each person.

@@ -1,0 +1,21 @@
+Meeting 3 Notes 10/11/2024
+
+General Agenda:
+•	Set expectations that we will be synchronizing with our class cadence and be in the requirements gather phase for 	this first few sprints at least. 
+•	Get more context around the VPS and transferring files.
+•	Look for next steps in terms of our project, more information on data gathering.
+
+Notes:
+
+FileZilla can be used to pull and push files on and off the server. We can use github externally for our version control and push the main branch to the server via filezilla to update the website.
+
+There is a Parkinson’s patient in the UK who is a former speech therapist, and her preferred method for therapy patients was to be hands on with her patient. She recommended that we don’t survey all the patients, but to just compile a bunch of data on therapy sessions then analyze it and then come back to the patients to see if we gathered useful data.
+
+Daves idea is to build mini prototypes of our website and features, then embed surveys directly into our prototypes so we can gather data more efficiently and effectively. Feedback would be immediate, and we can use it to iterate on our design ideas quickly. Additionally, during feedback session’s, we should try to get unbiased answers on the prototype and poke around for the general consensus on how to improve the prototype. We should also get feedback for the speech pathologists so they can give us feedback on the types of features we should include in our software to help therapy sessions. i.e Making our facial tracking pick up subtle differences in the sides of a client’s facial muscle control. 
+
+We will get an email on some examples of the type of web design he is looking for in terms of layout and general vibe(?).
+We try and tailor a conversation to test a specific word. For example instead of just asking a user to say a word,  we will include subtle que’s in our conversation to get them to say a specific word. This is a much better way to catch dysarthric speech patterns. – This is called free speech capture.
+
+We want to try and eliminate filler words from our data gathering, this will lead to more effective data gathered. I.E The conversations may have filler words, but it also has a word we want to capture. We can skip all the filler words and only record the captured word into the data to improve our models accuracy of that specific word. Therefore increasing the band of our recognizable vocabulary that we can predict and transcribe.
+
+Speech to text: WebRTC -> OpenAI/Google Text to Speech 
