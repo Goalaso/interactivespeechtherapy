@@ -1,0 +1,30 @@
+Meeting 10/25/2024
+1.	  Good Example Training
+•	Focus on speaking with volume and intent.
+•	Address the importance of adjusting speech volume, particularly in scenarios involving whispering.
+2.	  Volume Awareness
+•	Users should receive prompts to speak at a higher volume during training tasks.
+•	Tailor messages and phrases to encourage users to speak louder, enhancing their awareness of volume control.
+    i.	Encouraging Phrases:
+        1.	"Great effort! Can you try raising your voice just a bit more?"
+        2.	"You're doing well! Let's aim for a slightly louder volume."
+        3.	"Nice job! Now, let's increase your volume a little for better clarity."
+    ii.	Direct Instructions:
+        1.	"Please speak a bit louder to ensure your voice carries."
+        2.	"Try to project your voice more; a little more volume will help!"
+        3.	"Can you increase your volume just a notch?"
+    iii.	 Positive Reinforcement:
+        1.	"That sounded good! Let’s add a little more volume to it!"
+        2.	"Awesome start! Just a bit louder will make it even better!"
+    iv.	Visual Cues:
+        1.	Accompany prompts with visual feedback, such as a volume bar that changes color as the user speaks louder. For example:
+        2.	"Aim for the green zone on the volume bar!"
+        3.	 Volume Feedback Mechanism
+•	Implement a visual volume bar to indicate the appropriate volume range during speaking exercises.
+    i.	Categories: Low, Good, Better.
+•	Emphasize that each individual has a "personal best" volume.
+4.	 Mobile-Friendly Design
+•	Ensure the app is compatible for use on both web and mobile platforms.
+•	Utilize JavaScript’s auto scroll feature for optimal user experience.
+•	Consider variations in microphones, cameras, and headsets across devices to ensure consistent functionality.
+
