@@ -18,13 +18,16 @@ The Interactive Speech Therapy Web Application addresses the need for remote, ta
 
 ## Features
 
-- User account system
-- Speech exercises
-- AI chatbot speech exercise
-- User progress tracking
-- User dashboard
-- Speech pathologist dashboard
-- User/speech pathologist chat
+- Dual Web Apps: Separate, tailored interfaces for SLPs and patients.
+- User Account System: Allows secure registration, login, and role-based access for SLPs and patients.
+- Speech Exercises: Provides structured exercises that focus on improving volume, clarity, and intentional speaking.
+- AI Chatbot Speech Exercise: Engages patients in interactive exercises with an AI chatbot, offering prompts and feedback.
+- Real-Time Feedback: Visual volume bar and prompts help patients practice speaking with intent.
+- User Progress Tracking: Records and displays progress over time to both patients and SLPs.
+- User Dashboard: Patients can view their exercise history, track progress, and access new exercises.
+- Speech Pathologist Dashboard: SLPs can monitor patient progress, manage client data, and customize exercises.
+- User/SLP Chat: Allows secure messaging between patients and SLPs for communication and feedback.
+- Mobile-Friendly Design: Accessible across desktop and mobile devices for ease of use.
 
 ## Design Details
 
