@@ -18,8 +18,6 @@ Provide a concise introduction to your project. Explain what problem it solves a
 
 ## Features
 
-List the key features of your project. Use bullet points for clarity.
-
 - User account system
 - Speech exercises
 - AI chatbot speech exercise
