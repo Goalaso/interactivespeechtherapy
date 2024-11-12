@@ -1,4 +1,4 @@
-# Project Name
+# Interactive Speech Therapy Web Application
 
 Brief description of your project.
 
