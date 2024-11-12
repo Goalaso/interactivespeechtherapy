@@ -31,7 +31,70 @@ The Interactive Speech Therapy Web Application addresses the need for remote, ta
 
 ## Design Details
 
-Explain the high-level design decisions and architecture of your project. Include diagrams or code snippets if necessary.
+The Interactive Speech Therapy Web Application is a virtual-based, mobile-friendly web application designed to provide customized speech therapy solutions. The design includes multiple components to support an accessible, flexible experience for both patients and speech-language pathologists (SLPs).
+
+### 1. High-Level Architecture
+The app follows a client-server architecture, split into three main layers:
+
+- Client-Side Applications: Separate interfaces for SLPs and patients, both built with React for responsive, mobile-friendly design.
+- Backend Server: Handles application logic, API calls, authentication, and session management.
+- Data Storage Layer: A secure cloud database for storing user data, therapy progress, session logs, and chat messages.
+
+### 2. Client-Side Application (Frontend)
+Both the SLP Dashboard and Patient Dashboard are designed with React, providing a responsive, easy-to-navigate UI across PCs, laptops, tablets, and smartphones.
+
+Key Components:
+- Patient Dashboard: Displays exercise prompts, feedback, progress tracking, and allows for chatting with the assigned SLP.
+- SLP Dashboard: Provides tools for client management, session logs, patient progress tracking, and customization of therapy exercises.
+- Chat Interface: A built-in chat application to enable secure communication between patients and SLPs.
+Design Decisions:
+- Responsiveness: The UI is optimized for mobile use, as well as desktops and laptops, using responsive design techniques in CSS.
+- Ease of Navigation: A user-centered design ensures easy access to primary functions, with intuitive dashboards for both SLPs and patients.
+
+### 3. Backend Server
+The backend server, hosted on a virtual server, uses Node.js to handle:
+
+- API Gateway: Routes requests from the frontend to appropriate services.
+- Authentication & Authorization: Secures user accounts and role-based access control.
+- Speech and Feedback Processing: Integrates Whisper API for speech-to-text recognition and OpenAI API for generating personalized feedback.
+- Chat System: Manages secure real-time chat between patients and SLPs.
+
+Technology Choices:
+- Node.js: Chosen for its asynchronous capabilities, ideal for handling API requests, database operations, and real-time chat without blocking performance.
+- Whisper API: Provides robust speech recognition, converting patient speech into text for analysis.
+- OpenAI API: Used to generate meaningful feedback and prompts, making therapy sessions more engaging.
+
+### 4. Data Storage Layer
+The data storage layer is a cloud-hosted database that securely stores:
+
+- User Data: Account details and role (SLP or Patient).
+- Session Data: Logs of exercises, volume and speech metrics, and feedback.
+- Therapy Progress: Tracks performance and milestones over time for each patient.
+- Chat Data: Stores chat messages securely to ensure communication history is accessible to both patients and SLPs.
+Database Design:
+- Relational vs. NoSQL: Choose based on complexity and scalability needs; relational databases can handle structured data, while NoSQL offers flexibility for chat and session data.
+- Data Privacy and Compliance: Ensuring compliance with health data regulations (e.g., HIPAA, if required), with encrypted storage and secure access protocols.
+
+### 5. Data Flow and Interaction
+The data flow across the app follows these main steps:
+
+- User Login: Patients and SLPs log in with authenticated access.
+- Speech Exercises: Patients complete exercises, and the Whisper API converts speech to text.
+- Feedback Generation: The backend sends the text to OpenAI API to generate actionable feedback, displayed on the Patient Dashboard.
+Session Logging: Each session’s data is stored in the database for future reference by the patient and SLP.
+- Chat Interaction: Real-time messages between patients and SLPs are handled via the backend, ensuring data security and accessibility.
+
+### 6. Scalability and Performance Considerations
+- Virtual Server Hosting: By hosting on a virtual server, we maintain flexibility for scaling up resources as needed.
+- Caching: Implement caching for repeated requests, such as session data or user profile information, to optimize performance.
+- Load Balancing: Future enhancements could include load balancing if traffic to the server increases.
+
+### 7. Future Enhancements
+Potential improvements include:
+
+- Extended API Integration: Additional APIs for sentiment analysis or more complex speech evaluation.
+- Machine Learning: Developing custom ML models to analyze progress patterns or optimize feedback.
+- Mobile App Version: A dedicated mobile app could improve accessibility further.
 
 System design diagram: 
 ![System design diagram](https://github.com/user-attachments/assets/e83f781c-6c05-4712-92dc-243e140ba770)
