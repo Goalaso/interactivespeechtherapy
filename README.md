@@ -1,6 +1,6 @@
 # Interactive Speech Therapy Web Application
 
-Brief description of your project.
+A virtual server web application designed to provide personalized speech therapy for patients, particularly those with Parkinson's Disease. The app includes tools for both Speech-Language Pathologists (SLPs) and patients, offering exercises that focus on volume, clarity, and intent in speaking.
 
 ## Table of Contents
 - [Introduction](#introduction)
