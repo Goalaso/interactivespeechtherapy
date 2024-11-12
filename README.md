@@ -14,7 +14,7 @@ A virtual server web application designed to provide personalized speech therapy
 
 ## Introduction
 
-Provide a concise introduction to your project. Explain what problem it solves and why it's useful.
+The Interactive Speech Therapy Web Application addresses the need for remote, tailored speech therapy solutions, especially for patients with Parkinson's Disease who benefit from intensive voice exercises. By providing real-time feedback through volume prompts and visual cues, the app supports patients in improving their speech clarity and loudness. The Interactive Speech Therapy Web Application enables SLPs to monitor progress, customize exercises, and communicate with patients efficiently.
 
 ## Features
 
