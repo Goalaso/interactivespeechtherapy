@@ -30,6 +30,9 @@ Provide a concise introduction to your project. Explain what problem it solves a
 
 Explain the high-level design decisions and architecture of your project. Include diagrams or code snippets if necessary.
 
+System design diagram: 
+https://lucid.app/lucidchart/f24290ad-e13e-44fc-a357-03c7a45b584e/edit?viewport_loc=-133%2C-62%2C2304%2C1141%2C0_0&invitationId=inv_13337d04-13d0-4e5a-8b09-0dbc7cfb2129
+
 ### Example Code:
 
 # Code snippet or example to showcase design principles
