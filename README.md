@@ -14,7 +14,7 @@ A virtual server web application designed to provide personalized speech therapy
 
 ## Introduction
 
-The Interactive Speech Therapy Web Application addresses the need for remote, tailored speech therapy solutions, especially for patients with Parkinson's Disease who benefit from intensive voice exercises. By providing real-time feedback through volume prompts and visual cues, the app supports patients in improving their speech clarity and loudness. The Interactive Speech Therapy Web Application enables SLPs to monitor progress, customize exercises, and communicate with patients efficiently.
+Many individuals, especially children and adults with speech disorders, face challenges in effectively communicating, which can lead to frustration, low confidence, and difficulty in daily interaction. Access to traditional speech therapy can be limited due to cost, time, and location, hindering consistent progress. Additionally, therapy exercises can feel repetitive and disengaging, reducing motivation for improvement. Interactive Speech Therapy will provide a service to assist clients who struggle with dysarthric speech patterns. Our solution will utilize modern machine learning techniques to provide a therapy session that is interactive by having the patient speak with a chatbot in a natural conversation. 
 
 ## Features
 
