@@ -71,6 +71,7 @@ The data storage layer is a cloud-hosted database that securely stores:
 - Session Data: Logs of exercises, volume and speech metrics, and feedback.
 - Therapy Progress: Tracks performance and milestones over time for each patient.
 - Chat Data: Stores chat messages securely to ensure communication history is accessible to both patients and SLPs.
+  
 Database Design:
 - Relational vs. NoSQL: Choose based on complexity and scalability needs; relational databases can handle structured data, while NoSQL offers flexibility for chat and session data.
 - Data Privacy and Compliance: Ensuring compliance with health data regulations (e.g., HIPAA, if required), with encrypted storage and secure access protocols.
@@ -81,7 +82,7 @@ The data flow across the app follows these main steps:
 - User Login: Patients and SLPs log in with authenticated access.
 - Speech Exercises: Patients complete exercises, and the Whisper API converts speech to text.
 - Feedback Generation: The backend sends the text to OpenAI API to generate actionable feedback, displayed on the Patient Dashboard.
-Session Logging: Each session’s data is stored in the database for future reference by the patient and SLP.
+- Session Logging: Each session’s data is stored in the database for future reference by the patient and SLP.
 - Chat Interaction: Real-time messages between patients and SLPs are handled via the backend, ensuring data security and accessibility.
 
 ### 6. Scalability and Performance Considerations
