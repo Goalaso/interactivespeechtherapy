@@ -1,0 +1,34 @@
+Meeting 5 Notes: 10/25/2024
+Agenda:
+*Review training techniques for speech volume and intent.
+*Discuss prompts and strategies for improving volume awareness.
+*Finalize the volume feedback mechanism design.
+*Address considerations for mobile-friendly app design.
+
+1. Good Example Training
+*Emphasize speaking with volume and intent.
+*Highlight the importance of adjusting speech volume, especially in scenarios involving whispering.
+2. Volume Awareness
+Prompts and Strategies for Encouraging Users to Speak Louder:
+*Encouraging Phrases:
+  *"Great effort! Can you try raising your voice just a bit more?"
+  *"You're doing well! Let's aim for a slightly louder volume."
+  *"Nice job! Now, let's increase your volume a little for better clarity."
+*Direct Instructions:
+  *"Please speak a bit louder to ensure your voice carries."
+  *"Try to project your voice more; a little more volume will help!"
+  *"Can you increase your volume just a notch?"
+*Positive Reinforcement:
+  *"That sounded good! Let’s add a little more volume to it!"
+  *"Awesome start! Just a bit louder will make it even better!"
+*Visual Cues:
+  *Accompany prompts with visual feedback, such as a volume bar that changes color as the user speaks louder. Examples:
+    *"Aim for the green zone on the volume bar!"
+3. Volume Feedback Mechanism
+  *Add a visual volume bar to indicate the ideal volume range during exercises.
+  *Volume Categories: Low, Good, Better.
+  *Stress the idea of a "personal best" volume for each user.
+4. Mobile-Friendly Design
+  *Ensure compatibility across web and mobile platforms.
+  *Use JavaScript's auto-scroll feature for a smoother user experience.
+  *Account for device variations in microphones, cameras, and headsets to maintain consistent functionality.
