@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ProgressBar from "../components/ProgressBar";
 
 const ProgressPage = () => {
-  const [progress, setProgress] = useState(50); // Example progress value
+  const [progress, setProgress] = useState(50);
 
   return (
     <div>

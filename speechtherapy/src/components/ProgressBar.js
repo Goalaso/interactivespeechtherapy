@@ -2,7 +2,7 @@ import React from "react";
 
 const ProgressBar = ({ progress }) => {
   return (
-    <div style={{ width: "100%", backgroundColor: "#e0e0e0", borderRadius: "10px", overflow: "hidden" }}>
+    <div style={{ width: "100%", backgroundColor: "#e0e0e0", borderRadius: "10px" }}>
       <div
         style={{
           width: `${progress}%`,
@@ -15,3 +15,4 @@ const ProgressBar = ({ progress }) => {
 };
 
 export default ProgressBar;
+
