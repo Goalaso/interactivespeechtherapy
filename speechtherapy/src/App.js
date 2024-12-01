@@ -6,8 +6,9 @@ import Progress from "./pages/Progress"; // Adjust the path if necessary
 import BrowseExercises from "./pages/BrowseExercises";
 import ExerciseFeedback from "./pages/ExerciseFeedback";
 import ProgressPage from "./pages/ProgressPage";
-import MessagingSLP from "./pages/MessagingSLP";
+import MessagingSLP from "./pages/MessagingSLP.js";
 import Profile from "./pages/Profile";
+import Chatbot from "./pages/Chatbot.js";
 
 function App() {
   // State to track the current page
@@ -28,6 +29,8 @@ function App() {
         return <MessagingSLP />;
       case "profile":
         return <Profile />;
+      case "chatbot":
+        return <Chatbot />;
       default:
         return <h1>Page Not Found</h1>;
     }
@@ -54,6 +57,7 @@ function App() {
         </button>
         <button onClick={() => setCurrentPage("messagingSLP")}>Messages</button>
         <button onClick={() => setCurrentPage("profile")}>Profile</button>
+        <button onClick={() => setCurrentPage("chatbot")}>AI Chatbot</button>
       </nav>
 
       {/* Render the selected page */}
