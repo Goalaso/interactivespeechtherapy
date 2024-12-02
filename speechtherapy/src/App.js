@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
+import Login from "./pages/Login.js";
+import Register from "./pages/Register.js";
 import MainLayout from "./layouts/MainLayout";
 import Dashboard from "./pages/Dashboard"; // Import the Dashboard component
 import Progress from "./pages/Progress"; // Adjust the path if necessary
@@ -12,11 +14,15 @@ import Chatbot from "./pages/Chatbot.js";
 
 function App() {
   // State to track the current page
-  const [currentPage, setCurrentPage] = useState("dashboard");
+  const [currentPage, setCurrentPage] = useState("login");
 
   // Function to change the page
   const renderPage = () => {
     switch (currentPage) {
+      case "login":
+        return <Login onRegister={() => setCurrentPage("register")} onLoginSuccess={() => setCurrentPage("dashboard")}/>
+      case "register":
+        return <Register onLogin={() => setCurrentPage("login")} />
       case "dashboard":
         return <Dashboard />;
       case "progress":
@@ -49,12 +55,8 @@ function App() {
       >
         <button onClick={() => setCurrentPage("dashboard")}>Dashboard</button>
         <button onClick={() => setCurrentPage("progress")}>Progress</button>
-        <button onClick={() => setCurrentPage("browseExercises")}>
-          Browse Exercises
-        </button>
-        <button onClick={() => setCurrentPage("exerciseFeedback")}>
-          Exercise Feedback
-        </button>
+        <button onClick={() => setCurrentPage("browseExercises")}>Browse Exercises</button>
+        <button onClick={() => setCurrentPage("exerciseFeedback")}>Exercise Feedback</button>
         <button onClick={() => setCurrentPage("messagingSLP")}>Messages</button>
         <button onClick={() => setCurrentPage("profile")}>Profile</button>
         <button onClick={() => setCurrentPage("chatbot")}>AI Chatbot</button>
