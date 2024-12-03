@@ -69,6 +69,7 @@ function App() {
         <button onClick={() => setCurrentPage("messagingSLP")}>Messages</button>
         <button onClick={() => setCurrentPage("profile")}>Profile</button>
         <button onClick={() => setCurrentPage("chatbot")}>AI Chatbot</button>
+        <button onClick={() => setCurrentPage("login")}>Logout</button>
       </nav>
 
       {/* Render the selected page */}
