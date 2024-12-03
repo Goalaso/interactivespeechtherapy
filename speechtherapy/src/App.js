@@ -42,6 +42,15 @@ function App() {
     }
   };
 
+  if (currentPage == 'login' || currentPage == 'register') { // Don't render navbar if login/register page
+    return (
+      <div className="App">
+        {/* Render the selected page */}
+        <div style={{ padding: "20px" }}>{renderPage()}</div>
+      </div>
+    );
+  }
+
   return (
     <div className="App">
       {/* Navigation Bar */}
