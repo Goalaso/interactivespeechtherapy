@@ -7,8 +7,8 @@ const MessageBox = ({ message }) => {
         Hello!
       </div>
       <form>
-        <input type="text"></input>
-        <input type="submit" value="Send"></input>
+        <input type="text" />
+        <input type="submit" value="Send" />
       </form>
     </>
   );
