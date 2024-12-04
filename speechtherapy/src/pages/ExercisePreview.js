@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import Exercise from "./Exercise";
 
 const ExercisePreview = ({ exercise, onBack }) => {
+  const [onExercise, setExercise] = useState(null); // store which exercise was selected TODO: actually change the exercise page to the real exercise (fake one for now)
+  // If start exercise was clicked, move to the exercise page
+  if (onExercise) {
+    return (
+      <Exercise
+        onExercise={onExercise}
+        
+      />
+    );
+  }
   return (
     <div style={{ padding: "20px", maxWidth: "600px", margin: "0 auto" }}>
       <h1>Exercise Preview</h1>
@@ -30,8 +41,9 @@ const ExercisePreview = ({ exercise, onBack }) => {
         >
           Back
         </button>
+        
         <button
-          onClick={() => alert("Starting exercise...")} // Replace with exercise initiation logic
+          onClick={() => setExercise("test")} // Replace with exercise initiation logic
           style={{
             padding: "10px 20px",
             backgroundColor: "#76c7c0",
