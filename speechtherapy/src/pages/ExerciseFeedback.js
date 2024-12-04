@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import BrowseExercises from "./BrowseExercises";
 
 const ExerciseFeedback = () => {
+  const [onBack, setBack] = useState(null); // go back to browse exercises page
+  // If start exercise was clicked, move to the exercise page
+  if (onBack) {
+    return (
+      <BrowseExercises
+      />
+    );
+  }
   // Example feedback data (this could come from props, state, or an API in a real app)
   const feedbackMessages = [
     "Great job on completing today's articulation exercise!",
@@ -28,6 +37,7 @@ const ExerciseFeedback = () => {
           </div>
         ))}
       </div>
+      <button onClick={() => setBack("test")}>Back to Exercises</button> {/* back to exercises */ }
     </div>
   );
 };
