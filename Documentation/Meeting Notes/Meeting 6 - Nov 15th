@@ -1,0 +1,39 @@
+Meeting 6 Notes: 11/15/2024
+Agenda:
+*Update on website and PRATT analysis functionality.
+*Explore Zoom for Healthcare integration.
+*Address concerns about inappropriate language in outputs.
+*Discuss pairing audio with transcription and Whisper behavior.
+*Review plans for password authentication and testing environments.
+*Evaluate options for storing and encrypting voice data.
+*Discuss implementation of exercise routines.
+1. Website Update
+*The website has been updated!
+2. PRATT Analysis Integration
+*The system now sends an audio file that is analyzed for frequency, aiding speech pathologists in assessment.
+3. Zoom for Healthcare
+*Exploring Zoom Health Authority for secure telehealth services, ensuring compliance for virtual care and collaboration.
+4. Addressing Inappropriate Language in Speech Augmentation
+*Be cautious of inappropriate language in outputs when using the Samsung dataset for augmentative communication.
+*Reliance on ChatGPT guardrails to censor offensive language effectively.
+5. Audio Pairing and Transcription
+*Pairing audio with transcription is essential to ensure clarity and accuracy.
+*Issues with Whisper AI:
+  *It may create words it mishears unless paired with transcription.
+  *It performs auto-correction but with a low confidence rating compared to Google, which offers a higher confidence rating.
+6. Password Authentication for Testing
+*Current plan:
+  *Avoid full password encryption/authentication for now to facilitate easier testing.
+  *Create two versions:
+    *One with login credentials.
+    *One without, to simplify testing without handling sensitive data.
+7. Storing and Encrypting Voice Data
+*Voice data storage options:
+    *Current approach: Store audio files externally and save their file paths in the database.
+    *Use SQLite with a library to manage metadata (e.g., JSON) that is later stored in SQL.
+*Encryption Considerations:
+    *Exposed directories can allow unauthorized access to audio files.
+    *SQL can encrypt paths for enhanced security.
+8. Exercise Routines
+*Implement 30 minutes of broken-down exercises spread throughout the week.
+    *Incorporate various activities and tasks to provide comprehensive practice for users.
