@@ -49,13 +49,6 @@ const MessageBox = ({ chatKey }) => {
           </div>
         ))}
       </div>
-<<<<<<< Updated upstream
-      <form>
-        <input type="text"></input>
-        <input type="submit" value="Send"></input>
-      </form>
-    </>
-=======
 
       {/* Input and Send Button */}
       <div style={{ display: "flex", gap: "10px" }}>
@@ -82,7 +75,6 @@ const MessageBox = ({ chatKey }) => {
         </button>
       </div>
     </div>
->>>>>>> Stashed changes
   );
 };
 
