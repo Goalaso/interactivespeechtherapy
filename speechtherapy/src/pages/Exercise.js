@@ -1,26 +1,34 @@
 import React, { useState } from "react";
-import ExerciseFeedback from "./ExerciseFeedback";
+import Recorder from "../components/Recorder";
+import AudioPlayer from "../components/AudioPlayer";
+import VolumeMeter from "../components/VolumeMeter";
 
-const Exercise = ({ onExercise }) => {
-    const [onFeedback, setFeedback] = useState(null); // store what the feedback was  TODO: actually change the exercise page to the real exercise (fake one for now)
-  // If view feedback was clicked, move to the feedback page
-  if (onFeedback) {
+const Exercise = () => {
+    const [audioBlob, setAudioBlob] = useState(null);
+    const [stream, setStream] = useState(null);
+    const [volume, setVolume] = useState(0);
+
+    const handleRecordingComplete = (blob) => {
+        console.log("Recording complete, audioBlob:", blob);
+        setAudioBlob(blob);
+    };
+
+    const handleStream = (stream) => {
+        console.log("Stream in Exercise component:", stream);
+        setStream(stream);
+    };
+
+    const handleVolumeChange = (volume) => {
+        setVolume(volume);
+    };
+
     return (
-      <ExerciseFeedback
-      />
-    );
-  }
-    return (
-        <div>
-          <h1>Please say this sentence: </h1>
-          {/*exercise
-          TODO: actual exercises*/}
-          <p>
-            How much wood would a woodchuck chuck if a woodchuck could chuck wood?
-          </p>
-          <button onClick={() => setFeedback("test")}>View Feedback</button>
+        <div className="Exercise">
+            <Recorder onRecordingComplete={handleRecordingComplete} onStream={handleStream} onVolumeChange={handleVolumeChange} />
+            <VolumeMeter volume={volume} stream={stream}/>
+            {audioBlob && <AudioPlayer audioBlob={audioBlob} />}
         </div>
     );
-}
+};
 
 export default Exercise;
