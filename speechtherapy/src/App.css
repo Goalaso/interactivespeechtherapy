@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,464 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+:root {
+  --primary-color: #007BFF;
+  --background-color: #f8f9fa;
+  --text-color: #212529;
+  --secondary-text-color: #6c757d;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+  --warning-color: #ffc107;
+  --focus-outline: 3px solid #ffcc00;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 30px 25px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: var(--focus-outline);
+} */
+
+button {
+  background-color: var(--primary-color); /* Blue button */
+  color: #fff; /* White text */
+  border: 2px solid #0056b3; /* Add a border with a darker blue shade */
+  padding: 10px 15px; /* Padding for better spacing */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+  background-color: #0056b3; /* Slightly darker blue on hover */
+  border-color: #003f7f; /* Darker border on hover */
+}
+
+button:focus {
+  outline: var(--focus-outline); /* Accessibility outline */
+}
+
+
+/* nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: #ddd;
+} */
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: var(--primary-color); /* Use the primary blue color */
+  color: #fff; /* White text for contrast */
+  border: 2px solid #fff;
+  border-radius: 5px; /* Optional: Rounded corners for the navbar */
+  /* Remove flex-wrap from here */
+}
+
+nav button {
+  background-color: var(--primary-color); /* Make buttons blend with the navbar */
+  color:#fff ; /* White text for contrast */
+  border: 2px solid #fff; /* White border to stand out */
+  padding: 25px 40px; /* Increased padding for better accessibility */
+  font-size: 1.75rem; /* Larger font size for accessibility */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth hover effect */
+}
+
+nav button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  border-color: #fff; /* Keep the border white on hover */
+}
+
+nav button:focus {
+  outline: var(--focus-outline); /* Accessibility outline */
+}
+
+@media (max-width: 960px) {
+  nav {
+    flex-wrap: wrap; /* Apply flex-wrap for screens split in half */
+  }
+
+  nav button {
+    padding: 10px 20px; /* Reduced padding for smaller screens */
+    font-size: 1rem; /* Smaller font size for smaller screens */
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.App-link:focus,
+.App-link:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/*Dashboard  Page styling*/
+.dashboard-container {
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.progress-section {
+  margin-top: 20px;
+}
+
+.features-section {
+  margin-top: 20px;
+}
+
+.features-section h2 {
+  margin-bottom: 10px;
+}
+
+.features-section p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Progress Styling*/
+.progress-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.progress-content {
+  margin-top: 0;
+}
+
+.progress-content.with-header {
+  margin-top: 20px;
+}
+
+.progress-bar-background {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #76c7c0;
+}
+
+/* BrowseExercises Page Styling */
+.browse-exercises-container {
+  padding: 20px;
+}
+
+.page-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.exercises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.exercise-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.exercise-card:hover {
+  transform: scale(1.05);
+}
+
+/* Message Page Styling */
+
+.messaging-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Profile Page Styling */
+.profile-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.profile-input,
+.profile-textarea {
+  margin-left: 10px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Chatbot Component Styling */
+.chatbot-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-messagebox {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+
+/* Login Page Styling */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.login-input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.register-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.register-button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: #218838;
+}
+
+/* Register Page Styling */
+.register-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.register-title {
+  text-align: center;
+  color: #333;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.register-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.register-button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.register-footer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.register-back-button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #6c757d;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* ExercisePreview Page Styling */
+.exercise-preview-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.exercise-preview-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.exercise-preview-buttons {
+  margin-top: 20px;
+}
+
+.back-button,
+.start-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.back-button {
+  background-color: #ddd;
+}
+
+.start-button {
+  background-color: #76c7c0;
+  color: white;
+}
+
+/* Exercise Page Styling */
+.exercise-container {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.exercise-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.exercise-sentence {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.feedback-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feedback-button:hover {
+  background-color: #0056b3;
 }

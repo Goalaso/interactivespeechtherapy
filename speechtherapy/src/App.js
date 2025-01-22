@@ -4,10 +4,10 @@ import Login from "./pages/Login.js";
 import Register from "./pages/Register.js";
 import MainLayout from "./layouts/MainLayout";
 import Dashboard from "./pages/Dashboard"; // Import the Dashboard component
-import Progress from "./pages/Progress"; // Adjust the path if necessary
+//import Progress from "./pages/Progress"; // Adjust the path if necessary
 import BrowseExercises from "./pages/BrowseExercises";
 import ExerciseFeedback from "./pages/ExerciseFeedback";
-import ProgressPage from "./pages/ProgressPage";
+import Progress from "./pages/ProgressPage";
 import MessagingSLP from "./pages/MessagingSLP.js";
 import Profile from "./pages/Profile";
 import Chatbot from "./pages/Chatbot.js";
@@ -15,7 +15,7 @@ import Exercise from "./pages/Exercise.js"
 
 function App() {
   // State to track the current page
-  const [currentPage, setCurrentPage] = useState("login");
+  const [currentPage, setCurrentPage] = useState("dashboard"); // change usestate 
 
   // Function to change the page
   const renderPage = () => {
@@ -62,7 +62,7 @@ function App() {
           display: "flex",
           justifyContent: "space-around",
           padding: "10px",
-          background: "#ddd",
+          background: "#var(--primary)",
         }}
       >
         <button onClick={() => setCurrentPage("dashboard")}>Dashboard</button>
