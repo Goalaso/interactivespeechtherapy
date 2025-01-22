@@ -23,7 +23,7 @@ function App() {
       case "login":
         return <Login onRegister={() => setCurrentPage("register")} onLoginSuccess={() => setCurrentPage("dashboard")}/>
       case "register":
-        return <Register onLogin={() => setCurrentPage("login")} />
+        return <Register onLogin={() => setCurrentPage("login")} onRegisterSuccess={() => setCurrentPage("login")}/>
       case "dashboard":
         return <Dashboard />;
       case "progress":
