@@ -20,7 +20,11 @@ function Login({onRegister, onLoginSuccess}) {
 
             if (response.ok && data.success) {
                 alert(data.message || 'Login successful');
-                onLoginSuccess();
+                // Pass the user data up to App
+                onLoginSuccess({
+                    userId: data.userId,
+                    email: data.email,
+                });
             } else {
                 alert(data.message || 'Login failed: Incorrect email or password');
             }
