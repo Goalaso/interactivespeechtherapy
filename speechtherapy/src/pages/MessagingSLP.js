@@ -6,7 +6,7 @@ const MessagingSLP = () => {
   return (
     <div className="messaging-container">
         <h1 className="page-title">Messages</h1>
-        <MessageBox></MessageBox>
+        <MessageBox chatkey="slp"></MessageBox>
     </div>
   );
 };

@@ -14,16 +14,49 @@ import Chatbot from "./pages/Chatbot.js";
 import Exercise from "./pages/Exercise.js"
 
 function App() {
-  // State to track the current page
-  const [currentPage, setCurrentPage] = useState("dashboard"); // change usestate 
+  /*
+  * Logic to handle user state
+  */
+  const [currentPage, setCurrentPage] = useState("login");
 
+  const [currentUser, setCurrentUser] = useState(null);
+
+  const handleLoginSuccess = (userData) => {
+    setCurrentUser(userData);
+  };
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+  };
+
+  /* 
+  * Handling audio uploading
+  */
+ const handleAudioUpload = async (audioBlob) => {
+    const userId = currentUser.id;
+    const formData = new FormData();
+    formData.append('file', audioBlob, 'myRecording.wav');
+    formData.append('user_id', userId);
+
+    const response = await fetch('http://localhost:5000/upload-audio', {
+      method: 'POST',
+      body: formData,
+    });
+    const data = await response.json();
+    if (data.success){
+      alert(`Audio uploaded. ID: ${data.recordingId}`);
+    } else {
+      alert('Error uploading audio');
+    }
+ };
+ 
   // Function to change the page
   const renderPage = () => {
     switch (currentPage) {
       case "login":
         return <Login onRegister={() => setCurrentPage("register")} onLoginSuccess={() => setCurrentPage("dashboard")}/>
       case "register":
-        return <Register onLogin={() => setCurrentPage("login")} />
+        return <Register onLogin={() => setCurrentPage("login")} onRegisterSuccess={() => setCurrentPage("login")}/>
       case "dashboard":
         return <Dashboard />;
       case "progress":
@@ -76,6 +109,15 @@ function App() {
 
       {/* Render the selected page */}
       <div style={{ padding: "20px" }}>{renderPage()}</div>
+
+      {/* User State */}
+      <div>
+        {currentUser ? (
+          <Dashboard currentUser={currentUser} onLogout={handleLogout} />
+        ) : (
+          <Login onLoginSuccess={handleLoginSuccess} />
+        )}
+      </div>
     </div>
   );
 }

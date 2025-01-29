@@ -6,7 +6,7 @@ const Chatbot = () => {
   return (
     <div className="chatbot-container">
         <h1 className="page-title">Chatbot</h1>
-        <MessageBox className="chatbot-messagebox"></MessageBox>
+        <MessageBox chatKey="chatbot" className="chatbot-messagebox"></MessageBox>
     </div>
   );
 };

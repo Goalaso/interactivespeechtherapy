@@ -6,32 +6,32 @@ function Login({ onRegister, onLoginSuccess }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+        try {
+            const response = await fetch('http://localhost:3000/login', { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
 
-    try {
-      const response = await fetch("http://localhost:5000/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+            const data = await response.json();
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-
-      const data = await response.json();
-      if (data.success) {
-        alert("Login successful");
-        onLoginSuccess();
-      } else {
-        alert("Login failed: Incorrect email or password");
-      }
-    } catch (error) {
-      console.error("Error occurred during login:", error);
-      alert("An error occurred while trying to log in.");
-    }
-  };
+            if (response.ok && data.success) {
+                alert(data.message || 'Login successful');
+                // Pass the user data up to App
+                onLoginSuccess({
+                    userId: data.userId,
+                    email: data.email,
+                });
+            } else {
+                alert(data.message || 'Login failed: Incorrect email or password');
+            }
+        } catch (error) {
+            console.error('Error occurred during login:', error);
+            alert('An error occurred while trying to log in.');
+        }
+    };
 
   return (
     <div className="login-container">
