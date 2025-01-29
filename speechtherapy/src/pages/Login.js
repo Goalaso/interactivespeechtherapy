@@ -16,16 +16,17 @@ function Login({onRegister, onLoginSuccess}) {
                 body: JSON.stringify({ email, password }),
             });
 
-            if(!response.ok){
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-
             const data = await response.json();
-            if (data.success) {
-                alert('Login successful');
-                onLoginSuccess();
+
+            if (response.ok && data.success) {
+                alert(data.message || 'Login successful');
+                // Pass the user data up to App
+                onLoginSuccess({
+                    userId: data.userId,
+                    email: data.email,
+                });
             } else {
-                alert('Login failed: Incorrect email or password');
+                alert(data.message || 'Login failed: Incorrect email or password');
             }
         } catch (error) {
             console.error('Error occurred during login:', error);

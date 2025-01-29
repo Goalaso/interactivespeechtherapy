@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Register({ onLogin }) {
+function Register({ onLogin, onRegisterSuccess }) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -17,20 +17,17 @@ function Register({ onLogin }) {
                 body: JSON.stringify({email, password}),
             });
 
-            if(!response.ok){
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-
             const data = await response.json();
-            if(data.success){
-                alert('Account created successfully');
-                onLogin();
+
+            if(response.ok && data.success ){
+                alert(data.message || 'Registered successfully');
+                onRegisterSuccess();
             } else{
-                alert('Account creation failed: ' + data.message);
+                alert(data.message || 'Registration failed');
             }
         } catch (error){
             console.error('Error occurred during registration: ', error);
-            alert('An error occurred while trying to create an account.' + error.message);
+            alert('An error occurred while trying to create an account.');
         }
         
     };
