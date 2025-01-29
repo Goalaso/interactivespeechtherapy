@@ -4,9 +4,9 @@ import MessageBox from "../components/MessageBox";
 const Chatbot = () => {
 
   return (
-    <div>
-        <h1>Chatbot</h1>
-        <MessageBox></MessageBox>
+    <div className="chatbot-container">
+        <h1 className="page-title">Chatbot</h1>
+        <MessageBox chatKey="chatbot" className="chatbot-messagebox"></MessageBox>
     </div>
   );
 };
