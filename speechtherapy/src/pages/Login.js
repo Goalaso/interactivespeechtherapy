@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-function Login({ onRegister, onLoginSuccess }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+function Login({onRegister, onGuestLogin, onLoginSuccess}) {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,6 +60,7 @@ function Login({ onRegister, onLoginSuccess }) {
         <button onClick={onRegister} className="register-button">
           Register
         </button>
+        <button onClick={onGuestLogin}>Login as guest</button>
       </div>
     </div>
   );
