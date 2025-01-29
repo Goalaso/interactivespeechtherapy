@@ -1,26 +1,37 @@
-import React, { useState } from "react";
-import ExerciseFeedback from "./ExerciseFeedback";
+import React, { useState, useEffect } from "react";
+import Recorder from "../components/Recorder";
+import AudioPlayer from "../components/AudioPlayer";
+import VolumeMeter from "../components/VolumeMeter";
 
-const Exercise = ({ onExercise }) => {
-    const [onFeedback, setFeedback] = useState(null); // store what the feedback was  TODO: actually change the exercise page to the real exercise (fake one for now)
-  // If view feedback was clicked, move to the feedback page
-  if (onFeedback) {
+const Exercise = () => {
+    const [audioBlob, setAudioBlob] = useState(null);
+    const [stream, setStream] = useState(null);
+
+    const handleRecordingComplete = (blob) => {
+        setAudioBlob(blob);
+    };
+
+    useEffect(() => {
+        const getMedia = async () => {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                setStream(stream);
+            } catch (error) {
+                console.error("Error accessing media devices.", error);
+            }
+        };
+
+        getMedia();
+    }, []);
+
     return (
-      <ExerciseFeedback
-      />
-    );
-  }
-    return (
-        <div>
-          <h1>Please say this sentence: </h1>
-          {/*exercise
-          TODO: actual exercises*/}
-          <p>
-            How much wood would a woodchuck chuck if a woodchuck could chuck wood?
-          </p>
-          <button onClick={() => setFeedback("test")}>View Feedback</button>
+        <div className="App">
+            <h1>Audio Recorder</h1>
+            <Recorder onRecordingComplete={handleRecordingComplete} stream={stream} />
+            {audioBlob && <AudioPlayer audioBlob={audioBlob} />}
+            {stream && <VolumeMeter stream={stream} />}
         </div>
     );
-}
+};
 
 export default Exercise;
