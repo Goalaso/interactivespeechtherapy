@@ -15,7 +15,7 @@ import Exercise from "./pages/Exercise.js"
 
 function App() {
   // State to track the current page
-  const [currentPage, setCurrentPage] = useState("login");
+  const [currentPage, setCurrentPage] = useState("dashboard");
 
   // Function to change the page
   const renderPage = () => {
