@@ -21,7 +21,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case "login":
-        return <Login onRegister={() => setCurrentPage("register")} onLoginSuccess={() => setCurrentPage("dashboard")}/>
+        return <Login onRegister={() => setCurrentPage("register")} onGuestLogin={() => setCurrentPage("dashboard")} onLoginSuccess={() => setCurrentPage("dashboard")}/>
       case "register":
         return <Register onLogin={() => setCurrentPage("login")} />
       case "dashboard":

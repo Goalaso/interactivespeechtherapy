@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Login({onRegister, onLoginSuccess}) {
+function Login({onRegister, onGuestLogin, onLoginSuccess}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -54,6 +54,7 @@ function Login({onRegister, onLoginSuccess}) {
             <div style={{marginTop: '10px' }}>
                 <p>Dont have an account?</p>
                 <button onClick={onRegister}>Register</button>
+                <button onClick={onGuestLogin}>Login as guest</button>
             </div>
         </div>
     );
