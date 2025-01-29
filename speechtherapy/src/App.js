@@ -45,6 +45,15 @@ function App() {
     }
   };
 
+  if (currentPage == 'login' || currentPage == 'register') { // Don't render navbar if login/register page
+    return (
+      <div className="App">
+        {/* Render the selected page */}
+        <div style={{ padding: "20px" }}>{renderPage()}</div>
+      </div>
+    );
+  }
+
   return (
     <div className="App">
       {/* Navigation Bar */}
@@ -62,6 +71,7 @@ function App() {
         <button onClick={() => setCurrentPage("messagingSLP")}>Messages</button>
         <button onClick={() => setCurrentPage("profile")}>Profile</button>
         <button onClick={() => setCurrentPage("chatbot")}>AI Chatbot</button>
+        <button onClick={() => setCurrentPage("login")}>Logout</button>
       </nav>
 
       {/* Render the selected page */}

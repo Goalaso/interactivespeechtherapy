@@ -74,7 +74,6 @@ const MessageBox = ({ chatKey }) => {
           Send
         </button>
       </div>
-    </div>
   );
 };
 
