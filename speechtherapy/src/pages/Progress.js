@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 
+
 const Progress = ({ showHeader = true }) => {
+  //eventually, this will be dynamic based on user data
   const [progress, setProgress] = useState(50); // Example progress value
 
   return (
-    <div style={{ maxWidth: "600px", margin: "0 auto", padding: "20px" }}>
+    <div className="progress-container">
       {showHeader && <h1>Progress Tracker</h1>}
-      <div style={{ marginTop: showHeader ? "20px" : "0" }}>
+      <div className={`progress-content ${showHeader ? "with-header" : ""}`}>
         <h2>Your Progress</h2>
-        <div style={{ width: "100%", backgroundColor: "#e0e0e0", borderRadius: "25px", overflow: "hidden" }}>
+        <div className="progress-bar-background">
           <div
+            className="progress-bar"
             style={{
               width: `${progress}%`,
-              height: "20px",
-              backgroundColor: "#76c7c0",
             }}
           ></div>
         </div>

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import BrowseExercises from "./BrowseExercises";
 
+// TO DO: style page this page so it has similar format to the others
+
 const ExerciseFeedback = () => {
   const [onBack, setBack] = useState(null); // go back to browse exercises page
   // If start exercise was clicked, move to the exercise page
